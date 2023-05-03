@@ -1,0 +1,7 @@
+driverID,dob,fname,lname,number,nationality,bio,picture,racewins,podiums,pole,flaps,points,championships
+maxverstappen,1997-09-30,Max,Verstappen,33,Dutch,Max Verstappen is a Dutch racing driver currently competing in Formula One for Red Bull Racing.,https://example.com/max.jpg,10,34,6,3,389,0
+sergioperez,1990-01-26,Sergio,Perez,11,Mexican,Sergio Perez is a Mexican racing driver currently competing in Formula One for Red Bull Racing.,https://example.com/sergio.jpg,2,18,1,2,240,0
+lewishamilton,1985-01-07,Lewis,Hamilton,44,British,Lewis Hamilton is a British racing driver currently competing in Formula One for Mercedes-AMG Petronas Formula One Team.,https://example.com/lewis.jpg,103,174,103,54,1035,7
+georgerussell,1998-02-15,George,Russell,63,British,George Russell is a British racing driver currently competing in Formula One for Williams Racing.,https://example.com/george.jpg,0,0,0,1,0,0
+charlesleclerc,1997-10-16,Charles,Leclerc,16,Monegasque,Charles Leclerc is a Monegasque racing driver currently competing in Formula One for Scuderia Ferrari.,https://example.com/charles.jpg,2,13,7,4,227,0
+carlossainz,1994-09-01,Carlos,Sainz Jr.,55,Spanish,Carlos Sainz Jr. is a Spanish racing driver currently competing in Formula One for Scuderia Ferrari.,https://example.com/carlos.jpg,2,11,0,2,181,0

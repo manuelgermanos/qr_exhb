@@ -1,0 +1,4 @@
+constID,name,fullname,nationality,wins,pole,flaps,podiums,championships,goldenDriver,logo
+ferrari,Ferrari,Scuderia Ferrari,Italian,238,228,16,770,16,Michael Schumacher,https://example.com/ferrari_logo.jpg
+mercedes,Mercedes,Mercedes-AMG Petronas Formula One Team,German,119,128,18,308,8,Lewis Hamilton,https://example.com/mercedes_logo.jpg
+redbull,Red Bull,Red Bull Racing,Austrian,70,72,9,187,4,Sebastian Vettel,https://example.com/redbull_logo.jpg

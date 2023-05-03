@@ -1,0 +1,115 @@
+use f1_2
+
+db.createCollection("drivers", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: ["driverID", "dob", "fname", "lname", "number", "nationality", "bio", "picture", "racewins", "podiums", "pole", "flaps", "points", "championships"],
+         properties: {
+            driverID: {
+               bsonType: "string"
+            },
+            dob: {
+               bsonType: "string"
+            },
+            fname: {
+               bsonType: "string"
+            },
+            lname: {
+               bsonType: "string"
+            },
+            number: {
+               bsonType: "string"
+            },
+            nationality: {
+               bsonType: "string"
+            },
+            bio: {
+               bsonType: "string"
+            },
+            picture: {
+               bsonType: "string"
+            },
+            racewins: {
+               bsonType: "string"
+            },
+            podiums: {
+               bsonType: "string"
+            },
+            pole: {
+               bsonType: "string"
+            },
+            flaps: {
+               bsonType: "string"
+            },
+            points: {
+               bsonType: "string"
+            },
+            championships: {
+               bsonType: "string"
+            }
+         }
+      }
+   }
+});
+
+db.createCollection("constructors", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: ["constID", "name", "fullname", "nationality", "wins", "pole", "flaps", "podiums", "championships", "goldenDriver", "logo"],
+         properties: {
+            constID: {
+               bsonType: "string"
+            },
+            name: {
+               bsonType: "string"
+            },
+            fullname: {
+               bsonType: "string"
+            },
+            nationality: {
+               bsonType: "string"
+            },
+            wins: {
+               bsonType: "string"
+            },
+            pole: {
+               bsonType: "string"
+            },
+            flaps: {
+               bsonType: "string"
+            },
+            podiums: {
+               bsonType: "string"
+            },
+            championships: {
+               bsonType: "string"
+            },
+            goldenDriver: {
+               bsonType: "string"
+            },
+            logo: {
+               bsonType: "string"
+            }
+         }
+      }
+   }
+});
+
+db.createCollection("drivesFor", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: ["driverID", "constID"],
+         properties: {
+            driverID: {
+               bsonType: "string"
+            },
+            constID: {
+               bsonType: "string"
+            }
+         }
+      }
+   }
+});
