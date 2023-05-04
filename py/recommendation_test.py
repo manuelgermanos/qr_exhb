@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = 'seb5goat'
 
 # Define the MongoDB connection string
-connection_string = "mongodb+srv://admin:admin@coe416database.qlhbx66.mongodb.net/"
+connection_string = "mongodb+srv://rec1:rec1@coe416database.qlhbx66.mongodb.net/"
 
 # Connect to the MongoDB cluster
 client = MongoClient(connection_string)
