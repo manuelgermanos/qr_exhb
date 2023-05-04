@@ -43,7 +43,10 @@ def constructor(constID):
     if prev_constID is not None and prev_constID != constID:
         trans = f"{prev_constID}xx{constID}"
         rec1.update_one({'trans': trans}, {'$inc': {'num': 1}}, upsert=True)
-
+    doc = db.rec2.find_one({'picked': constID})
+    if doc is not None:
+        db.rec2.update_one({'_id': doc['_id']}, {'$inc': {'num1': 1}})
+    
     # Store the current constructor in the session
     session['prev_constID'] = constID
 
@@ -55,6 +58,8 @@ def constructor(constID):
 
     # Return the data as JSON
     return jsonify(data)
+
+
 
 
 if __name__ == '__main__':
