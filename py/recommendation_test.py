@@ -26,6 +26,7 @@ def constructor(constID):
     db = client.f1_2
     constructors = db.constructors
     drivesFor = db.drivesFor
+    drivers = db.drivers
     rec1 = db.rec1
 
     # Retrieve the details of the selected constructor
@@ -34,7 +35,14 @@ def constructor(constID):
         return jsonify({'error': 'Invalid constID'}), 400
 
     # Retrieve the drivers that drive for the selected constructor
-    drivers_data = list(drivesFor.find({'constID': constID}, {'_id': 0, 'driverID': 1}))
+    drivesFor_data = list(drivesFor.find({'constID': constID}, {'_id': 0, 'driverID': 1}))
+
+    # Retrieve the details of the drivers
+    drivers_data = []
+    for driveFor in drivesFor_data:
+        driver_data = drivers.find_one({'driverID': driveFor['driverID']}, {'_id': 0})
+        if driver_data is not None:
+            drivers_data.append(driver_data)
 
     # Check if there is a previously selected constructor in the session
     prev_constID = session.get('prev_constID')
@@ -46,7 +54,7 @@ def constructor(constID):
     doc = db.rec2.find_one({'picked': constID})
     if doc is not None:
         db.rec2.update_one({'_id': doc['_id']}, {'$inc': {'num1': 1}})
-    
+
     # Store the current constructor in the session
     session['prev_constID'] = constID
 
