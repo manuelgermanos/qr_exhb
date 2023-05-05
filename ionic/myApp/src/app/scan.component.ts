@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import type { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import { Router } from '@angular/router';
+import { BarcodeScanner, BarcodeScanResult } from '@ionic-native/barcode-scanner/ngx';
 
 @Component({
   selector: 'app-scan',
@@ -8,11 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./scan.component.scss'],
 })
 export class ScanComponent {
-  constructor(private barcodeScanner: BarcodeScanner, private router: Router) {}
+  constructor(private barcodeScanner: BarcodeScanner) {}
 
-  scanQRCode() {
-    this.barcodeScanner.scan().then((barcodeData) => {
-      this.router.navigate(['/details', barcodeData.text]);
+  scanCode() {
+    this.barcodeScanner.scan().then((barcodeData: BarcodeScanResult) => {
+      console.log('Barcode data', barcodeData);
+    }).catch(err => {
+      console.log('Error', err);
     });
   }
 }

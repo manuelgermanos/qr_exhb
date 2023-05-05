@@ -1,3 +1,33 @@
-<p>
-  new-details works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="constructorData?.imgURL" alt="Constructor logo" />
+    <ion-card-header>
+      <ion-title>{{constructorData?.name}}</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{constructorData?.nationality}}</p>
+      <p>{{constructorData?.url}}</p>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>
+            Drivers
+          </ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let driver of driversData">
+          <ion-avatar slot="start">
+            <img [src]="driver.imgURL" alt="{{driver.name}} avatar" />
+          </ion-avatar>
+          <ion-label>{{driver.name}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
