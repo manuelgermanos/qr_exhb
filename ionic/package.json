@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@ionic-native/barcode-scanner": "^5.36.0"
+  }
+}
